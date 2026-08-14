@@ -51,7 +51,7 @@ Data Source: https://www.kaggle.com/datasets/usdot/flight-delays
   <img width="70%" alt="Screenshot 2026-08-14 at 15 31 54" src="https://github.com/user-attachments/assets/3181dcdb-1ccb-444d-975f-7f66a4401e05" />
 
 
-### January 2015 North American blizzard Analysis
+### January 2015 North American Blizzard Analysis
   <img width="70%" alt="Screenshot 2026-08-14 at 15 34 17" src="https://github.com/user-attachments/assets/8f3ef8e5-98be-4199-a753-0d66bd8a4f58" />
 
   <img width="70%" alt="Screenshot 2026-08-14 at 15 35 03" src="https://github.com/user-attachments/assets/5a302e65-9f3e-46ff-a96e-49610745ab53" />
