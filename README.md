@@ -7,7 +7,7 @@ This project explores U.S. air travel patterns in 2015 using the 2015 Flight Del
 Data Source: https://www.kaggle.com/datasets/usdot/flight-delays
 
 
-## Tools and skills
+## Tools and Skills
 
 ### Tools
 - Tableau
