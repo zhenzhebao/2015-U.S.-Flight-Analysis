@@ -4,10 +4,7 @@
 
 This project explores U.S. air travel patterns in 2015 using the 2015 Flight Delays and Cancellations dataset from the U.S. Department of Transportation (DOT). The analysis begins by presenting key KPIs to provide a quick summary of flight activity, followed by analyses of normal, diverted, and canceled flights from multiple perspectives. The project concludes with an in-depth analysis of how winter storms in early 2015 affected U.S. air travel. 
 
-## Data Source
-2015 Flight Delays and Cancellations dataset
-
-https://www.kaggle.com/datasets/usdot/flight-delays
+Data Source: https://www.kaggle.com/datasets/usdot/flight-delays
 
 
 ## Tools and skills
