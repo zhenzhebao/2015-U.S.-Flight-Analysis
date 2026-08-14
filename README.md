@@ -83,7 +83,7 @@ Data Source: https://www.kaggle.com/datasets/usdot/flight-delays
 - **Delay variables:** Air system, security, airline, late-aircraft, and weather delay columns were removed because of substantial missing data.
 - **Flight status classification:** CASE statements were used with cancellation and diversion indicators to classify flights as normal, diverted, or canceled and to handle missing cancellation-reason values.
 - **Time formatting:** Flight time fields stored as four-digit numeric values were converted into standard time formats.
-- **Missing values:** Because of a NULL represented unavailable information rather than an invalid flight record, the record was retained and NOT NULL constraints were not applied to those fields. 
+- **Missing values:** The remaining null values represented unavailable information rather than invalid flight records. Therefore, the records were retained and NOT NULL constraints were not applied to those fields.
 
 ## Database Design 
   - The database contains five entities: Flight, Flight Information, Flight Schedule, U.S. Airport, and U.S. Airline.
