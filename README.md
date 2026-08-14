@@ -88,5 +88,5 @@ Data Source: https://www.kaggle.com/datasets/usdot/flight-delays
 ## Database Design 
   - The database contains five entities: Flight, Flight Information, Flight Schedule, U.S. Airport, and U.S. Airline.
   - Because the same flight number can be associated with different origin and destination airport pairs, Flight Information and Flight Schedule are connected directly to the Flight table.
-  <img width="70%" alt="Flights" src="https://github.com/user-attachments/assets/c7f6291a-bae6-4a8c-8965-254b2883b3d8" />
+    <img width="70%" alt="Flights" src="https://github.com/user-attachments/assets/c7f6291a-bae6-4a8c-8965-254b2883b3d8" />
 
