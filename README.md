@@ -46,20 +46,32 @@ Data Source: https://www.kaggle.com/datasets/usdot/flight-delays
 - Event-Based Analysis
 - Insight Communication
 
-## Dashboard Preview
-  <img width="70%" alt="image" src="https://github.com/user-attachments/assets/f70c74c1-68c4-4883-8b55-d44801221f9f" />
+## Analysis and Dashboards
+### 2015 U.S. Flight Statistics
+  <img width="70%" alt="Screenshot 2026-08-14 at 15 31 54" src="https://github.com/user-attachments/assets/3181dcdb-1ccb-444d-975f-7f66a4401e05" />
+
+
+### January 2015 North American blizzard Analysis
+  <img width="70%" alt="Screenshot 2026-08-14 at 15 34 17" src="https://github.com/user-attachments/assets/8f3ef8e5-98be-4199-a753-0d66bd8a4f58" />
+
+  <img width="70%" alt="Screenshot 2026-08-14 at 15 35 03" src="https://github.com/user-attachments/assets/5a302e65-9f3e-46ff-a96e-49610745ab53" />
+
+  <img width="70%" alt="Screenshot 2026-08-14 at 15 36 33" src="https://github.com/user-attachments/assets/0b1237cc-fe44-4c7f-9ab7-5388f12a20f8" />
+
+  <img width="70%" alt="Screenshot 2026-08-14 at 15 36 59" src="https://github.com/user-attachments/assets/04033572-f197-4834-bb8f-c59801d1915d" />
 
 ## Key Insights
 
-- In 2015, approximately 4% of flights were cancelled, while nearly 70% experienced minor to moderate delays.
-- Adverse weather conditions were the leading cause of flight cancellations throughout the year.
-   <img width="60%" alt="image" src="https://github.com/user-attachments/assets/e96504b7-1d73-4d9c-b7e8-1b476ad18899" />
- 
-- Flight cancellations peaked in February, largely due to the North American blizzard, while September recorded the fewest cancellations.
-  <img width="70%" alt="Screenshot 2026-05-30 at 21 29 43" src="https://github.com/user-attachments/assets/61e0f6ff-9d8a-471d-8bf0-487bd74b3b8b" />
-- Flights scheduled on Sundays were more likely to be cancelled compared to those on Thursdays and Fridays.
-  <img width="60%" alt="image" src="https://github.com/user-attachments/assets/dd8429b4-897a-4b77-a87d-f626b6137a99" />
-  
-- No clear relationship was observed between airport location and overall cancellation patterns.
-  <img width="70%" alt="image" src="https://github.com/user-attachments/assets/092f06a0-7a9e-4c16-b705-2bf1c09b8d15" />
+### Overall Flight Diversion and Cancellation Patterns
+- The patterns of flight diversions and cancellations differed between the two winter storms. 
+- The peak cancellation rates were relatively similar, while the diversion rate was significantly higher during the January 31–February 2 winter storm. 
+- Peak flight diversions occurred around the middle of each winter storm, while peak flight cancellations occurred near the end. 
 
+### Flight Cancellations and Diversions by Region
+- Cancellation and diversion patterns also differed between flights operating within the same region and those crossing regions. 
+- Flights operating within the South were less affected overall, with the lowest cancellation and diversion rates. 
+- Among flights operating within the Northeast, 22.73% were cancelled, compared with only 0.87% of flights operating within the South. In contrast, flights operating within the West and cross region flights both had a 0.27% diversion rate, compared with 0.09% for the South. 
+
+### Daily Flight Cancellation and Diversion Rates
+- From a daily perspective, 98.76% of flights operating within the Northeast were cancelled on January 27, while 89.80% were cancelled on February 2. 
+- The Northeast diversion rate reached 0.72% on January 24, while the diversion rate for cross region flights reached 1.04% on February 1. 
