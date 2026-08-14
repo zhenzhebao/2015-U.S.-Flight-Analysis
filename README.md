@@ -2,9 +2,15 @@
 
 ## Project Overview
 
-Flight delays and cancellations can significantly impact passenger experience. Using the 2015 Flight Delays and Cancellations dataset from the U.S. Department of Transportation (DOT), this project identifies the pattern and major causes of flight cancellations. Data was cleaned and aggregated using JMP, and the results were visualized through an interactive Tableau dashboard.
+This project explores U.S. air travel patterns in 2015 using the 2015 Flight Delays and Cancellations dataset from the U.S. Department of Transportation (DOT). The analysis begins by presenting key KPIs to provide a quick summary of flight activity, followed by analyses of normal, diverted, and canceled flights from multiple perspectives. The project concludes with an in-depth analysis of how winter storms in early 2015 affected U.S. air travel. 
 
-### Tableau Techniques
+## Data Source
+2015 Flight Delays and Cancellations dataset
+
+https://www.kaggle.com/datasets/usdot/flight-delays
+
+
+## Tableau Techniques
 
 - Calculated Fields
 - Table Calculations
