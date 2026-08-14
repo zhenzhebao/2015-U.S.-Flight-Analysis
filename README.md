@@ -70,7 +70,7 @@ Data Source: https://www.kaggle.com/datasets/usdot/flight-delays
 ### Flight Cancellations and Diversions by Region
 - Cancellation and diversion patterns also differed between flights operating within the same region and those crossing regions. 
 - Flights operating within the South were less affected overall, with the lowest cancellation and diversion rates. 
-- Among flights operating within the Northeast, 22.73% were cancelled, compared with only 0.87% of flights operating within the South. In contrast, flights operating within the West and cross region flights both had a 0.27% diversion rate, compared with 0.09% for the South. 
+- Among flights operating within the Northeast, 22.73% were canceled, compared with only 0.87% of flights operating within the South. In contrast, flights operating within the West and cross region flights both had a 0.27% diversion rate, compared with 0.09% for the South. 
 
 ### Daily Flight Cancellation and Diversion Rates
 - From a daily perspective, 98.76% of flights operating within the Northeast were cancelled on January 27, while 89.80% were cancelled on February 2. 
