@@ -74,4 +74,14 @@ Data Source: https://www.kaggle.com/datasets/usdot/flight-delays
 
 ### Daily Flight Cancellation and Diversion Rates
 - From a daily perspective, 98.76% of flights operating within the Northeast were cancelled on January 27, while 89.80% were cancelled on February 2. 
-- The Northeast diversion rate reached 0.72% on January 24, while the diversion rate for cross region flights reached 1.04% on February 1. 
+- The Northeast diversion rate reached 0.72% on January 24, while the diversion rate for cross region flights reached 1.04% on February 1.
+
+## Data Cleaning 
+- **Invalid airport codes:** Some flights contained origin or destination airport codes that could not be matched to the airport reference data. To preserve these flight records, unmatched airports were mapped to a designated N/A airport record.
+- **Date standardization:** Separate date-related fields were combined into a single calendar date, and unnecessary date columns were removed afterward.
+- **Distance standardization:** Small differences were found in the recorded distance for some identical airport pairs. These values were standardized using the minimum recorded distance for each route.
+- **Delay variables:** Air system, security, airline, late-aircraft, and weather delay columns were removed because of substantial missing data.
+- **Flight status classification:** CASE statements were used with cancellation and diversion indicators to classify flights as normal, diverted, or canceled and to handle missing cancellation-reason values.
+- **Time formatting:** Flight time fields stored as four-digit numeric values were converted into standard time formats.
+- **Missing values:** Because of a NULL represented unavailable information rather than an invalid flight record, the record was retained and NOT NULL constraints were not applied to those fields. 
+
