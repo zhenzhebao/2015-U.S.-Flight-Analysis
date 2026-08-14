@@ -10,17 +10,44 @@ This project explores U.S. air travel patterns in 2015 using the 2015 Flight Del
 https://www.kaggle.com/datasets/usdot/flight-delays
 
 
-## Tableau Techniques
+## Tools and skills
 
+### Tools
+- Tableau
+- PostgreSQL
+
+### Tableau Skills
 - Calculated Fields
 - Table Calculations
-- Maps
 - Interactive Dashboard Filters
 - Trend Lines
-- Annotations
+- Reference Bands & Annotations
 - Dual-Axis Charts
 - Customized Tooltips
-- Grouped Categories
+- Maps & Geographic Analysis
+- Dashboard Design
+
+### SQL / PostgreSQL
+- Relational Database Design
+- Data Cleaning & Validation
+- Data Type Conversion
+- CTEs & Subqueries
+- Joins
+- Conditional Aggregation
+- Window Functions
+- CASE Statements
+- Date & String Functions
+- Views & Materialized Views
+- KPI & Rate Calculations
+
+### Data Analysis
+- KPI Definition
+- Metric Definition & Business Rules
+- Data Quality Assessment
+- Trend & Pattern Analysis
+- Comparative Analysis
+- Event-Based Analysis
+- Insight Communication
 
 ## Dashboard Preview
   <img width="70%" alt="image" src="https://github.com/user-attachments/assets/f70c74c1-68c4-4883-8b55-d44801221f9f" />
