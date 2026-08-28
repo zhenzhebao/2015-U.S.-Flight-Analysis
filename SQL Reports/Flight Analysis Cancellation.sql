@@ -142,3 +142,30 @@ sum(case
 end)as number_of_canceled_flights, count(flight_id) as total_scheduled_flights
 from t
 group by region;
+
+/* Daily Cancellation rate 7 days moving average*/
+create materialized view daily_cancellation_rate_moving_average as 
+with t as (select calendar_date,count(flight_id) as number_of_scheduled_flights,
+sum(case 
+	when cancellation_reason!='Diverted Flight' and cancellation_reason!='Normal Flight' then 1
+	else 0
+end) as number_of_cancelled_flights
+from flight_database_view
+group by calendar_date),
+t2 as (select calendar_date,
+round(number_of_cancelled_flights*1.0/number_of_scheduled_flights::numeric,4) as daily_cancellation_rate
+from t)
+select calendar_date,daily_cancellation_rate,
+round(avg(daily_cancellation_rate) 
+over(order by calendar_date rows between 6 preceding and current row)::numeric,4) as moving_cancellation_rate
+from t2;
+
+/* Daily Cancellation counts 7 days moving average*/
+create materialized view number_of_cancellations_moving_average as 
+with t as (select calendar_date,
+count(flight_id) over(partition by calendar_date) as daily_cancellations,
+count(flight_id) over(order by calendar_date range between interval '6 days' preceding and current row) as rolling_7_day_cancellations
+from flight_database_view
+where cancelled='Yes')
+select distinct calendar_date,daily_cancellations,rolling_7_day_cancellations
+from t;
