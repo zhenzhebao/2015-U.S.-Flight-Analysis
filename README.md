@@ -22,6 +22,7 @@ Data Source: https://www.kaggle.com/datasets/usdot/flight-delays
 - Dual-Axis Charts
 - Customized Tooltips
 - Maps & Geographic Analysis
+- Dynamic Zone Visibility
 - Dashboard Design
 
 ### SQL / PostgreSQL
@@ -31,7 +32,8 @@ Data Source: https://www.kaggle.com/datasets/usdot/flight-delays
 - CTEs & Subqueries
 - Joins
 - Conditional Aggregation
-- Window Functions
+- Grouping Sets & Rollup
+- Window Functions &  Window Frames (rows, range)
 - CASE Statements
 - Date & String Functions
 - Views & Materialized Views
