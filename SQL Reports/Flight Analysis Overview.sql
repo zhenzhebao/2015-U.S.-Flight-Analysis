@@ -156,3 +156,88 @@ select trim(to_char(calendar_date,'Day'))as day,count(flight_id) as flight_volum
 from flight_database_view
 where cancellation_reason='Normal Flight' or cancellation_reason='Diverted Flight'
 group by trim(to_char(calendar_date,'Day'));
+
+
+/* flight distance by region*/
+create materialized view flight_distance_distribution as 
+with t as (select flight_id,distance,case 
+	when origin_state in ('CT','ME','MA','NH','RI','VT','NJ','NY','PA') 
+	and  destination_state in ('CT','ME','MA','NH','RI','VT','NJ','NY','PA')
+	then 'Northeast'
+	when origin_state in ('IL','IN','MI','OH','WI','IA','KS','MN','MO','NE','ND','SD')
+	and destination_state in ('IL','IN','MI','OH','WI','IA','KS','MN','MO','NE','ND','SD')
+	then 'Midwest'
+	when origin_state in ('DE','FL','GA','MD','NC','SC','VA','DC','WV','AL','KY','MS',
+	'TN','AR','LA','OK','TX') and destination_state in ('DE','FL','GA','MD','NC','SC','VA','DC',
+	'WV','AL','KY','MS','TN','AR','LA','OK','TX') then 'South'
+	when origin_state in ('AZ','CO','ID','MT','NV','NM','UT','WY','AK','CA','HI','OR','WA')
+	and  destination_state in ('AZ','CO','ID','MT','NV','NM','UT','WY','AK','CA','HI','OR','WA')
+	then 'West'
+	else 'Cross Region'
+end as region
+from flight_database_view
+where cancellation_reason='Normal Flight' and 
+origin_airport_code!='N/A' and destination_airport_code!='N/A'),
+t2 as (select region,max(distance)as maxmium_flight_distance,
+min(distance) as minimum_flight_distance,
+round(avg(distance)::numeric) as average_flight_distance
+from t
+group by rollup(region))
+select coalesce(region,'All Regions')as region,maxmium_flight_distance,
+minimum_flight_distance,average_flight_distance
+from t2
+order by case when region!='All Regions' then 0 else 1 end,region;
+
+/* Flight Distance Group by Region*/
+create materialized view flight_distiance_group_distribution_by_region as
+with t as (select flight_id,distance,case 
+	when origin_state in ('CT','ME','MA','NH','RI','VT','NJ','NY','PA') 
+	and  destination_state in ('CT','ME','MA','NH','RI','VT','NJ','NY','PA')
+	then 'Northeast'
+	when origin_state in ('IL','IN','MI','OH','WI','IA','KS','MN','MO','NE','ND','SD')
+	and destination_state in ('IL','IN','MI','OH','WI','IA','KS','MN','MO','NE','ND','SD')
+	then 'Midwest'
+	when origin_state in ('DE','FL','GA','MD','NC','SC','VA','DC','WV','AL','KY','MS',
+	'TN','AR','LA','OK','TX') and destination_state in ('DE','FL','GA','MD','NC','SC','VA','DC',
+	'WV','AL','KY','MS','TN','AR','LA','OK','TX') then 'South'
+	when origin_state in ('AZ','CO','ID','MT','NV','NM','UT','WY','AK','CA','HI','OR','WA')
+	and  destination_state in ('AZ','CO','ID','MT','NV','NM','UT','WY','AK','CA','HI','OR','WA')
+	then 'West'
+	else 'Cross Region'
+end as region
+from flight_database_view
+where cancellation_reason='Normal Flight' and 
+origin_airport_code!='N/A' and destination_airport_code!='N/A'),
+t2 as (select flight_id,distance,region,
+case 
+	when distance <500 then 'Less than 500 miles'
+	when distance <1000 then '500-1000 miles'
+	when distance <1500 then '1000-1500 miles'
+	when distance <2000 then '1500-2000 miles'
+	when distance <2500 then '2000-2500 miles'
+	when distance <3000 then '2500-3000 miles'
+	when distance <3500 then '3000-3500 miles'
+	else '3500 miles or more'
+end as distance_group
+from t),
+t3 as (select region, distance_group,count(*) as counts
+from t2
+group by grouping sets ((region,distance_group),(distance_group))),
+t4 as (select coalesce(region,'All Region') as region, distance_group, counts,
+case 
+	when distance_group='Less than 500 miles' then 1
+	when distance_group='500-1000 miles'  then 2
+	when distance_group='1000-1500 miles' then 3
+	when distance_group='1500-2000 miles' then 4
+	when distance_group='2000-2500 miles' then 5
+	when distance_group='2500-3000 miles' then 6
+	when distance_group='3000-3500 miles' then 7
+	else 8
+end as distance_group_order
+from t3)
+select region, distance_group, counts
+from t4
+order by case
+	when region!='All Region' then 0 
+	else 1
+end,region,distance_group_order;
