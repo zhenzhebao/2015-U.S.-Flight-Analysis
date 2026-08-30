@@ -88,7 +88,10 @@ Data Source: https://www.kaggle.com/datasets/usdot/flight-delays
 - **Missing values:** The remaining null values represented unavailable information rather than invalid flight records. Therefore, the records were retained and NOT NULL constraints were not applied to those fields.
 
 ## Database Design 
-  - The database contains five entities: Flight, Flight Information, Flight Schedule, U.S. Airport, and U.S. Airline.
   - Because the same flight number can be associated with different origin and destination airport pairs, Flight Information and Flight Schedule are connected directly to the Flight table.
-    <img width="70%" alt="Flights" src="https://github.com/user-attachments/assets/c7f6291a-bae6-4a8c-8965-254b2883b3d8" />
+    <img width="70%" alt="Flights" src="https://github.com/user-attachments/assets/7c4cc5c9-205a-4b40-a1af-21b02571e512" />
+    
+    <img width="70%" alt="Screenshot 2026-08-30 at 19 17 21" src="https://github.com/user-attachments/assets/702d0260-862d-426e-b6a2-23660db15be2" />
+
+
 
