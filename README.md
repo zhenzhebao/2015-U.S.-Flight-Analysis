@@ -29,7 +29,7 @@ Data Source: https://www.kaggle.com/datasets/usdot/flight-delays
 - Relational Database Design
 - Data Cleaning & Validation
 - Data Type Conversion
-- CTEs & Subqueries
+- CTEs & Subqueries & Correlated Subqueries
 - Joins
 - Conditional Aggregation
 - Grouping Sets & Rollup
