@@ -10,8 +10,8 @@ for airport in airports:
   print('airport:',airport)
   attempt=0
   url='https://archive-api.open-meteo.com/v1/archive'
-  params={'latitude':airports[airport]['latitude'],'longitude':airports[airport]['longitude'],'start_date':'2015-01-21','end_date':'2015-02-05','timezone':'auto',
-          'daily':'weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,snowfall_sum,wind_speed_10m_max'}
+  params={'latitude':airports[airport]['latitude'],'longitude':airports[airport]['longitude'],'start_date':'2015-01-21','end_date':'2015-02-05',
+          'timezone':'auto','daily':'weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,snowfall_sum,wind_speed_10m_max'}
 
   response=None
   
@@ -83,6 +83,7 @@ for airport in airports:
               daily=data[i]
   units=pd.DataFrame(unit,index=[0])
   units['unit_id']=1
+  units.rename(columns={'time':'time_format'},inplace=True)
   units=units.drop_duplicates()
   if units.isna().sum().sum()==0:
      #print('No missing value for units data')
@@ -91,6 +92,7 @@ for airport in airports:
     raise Exception ('Missing value in units data')
   daily_data=pd.DataFrame(daily)
   daily_data['airport']=airport
+  daily_data['unit_id']=1
   daily_data=daily_data.drop_duplicates()
   if daily_data.isna().sum().sum()==0:
      #print('No missing value for daily data')

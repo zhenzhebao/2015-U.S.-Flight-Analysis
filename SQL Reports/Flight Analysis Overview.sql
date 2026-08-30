@@ -189,6 +189,12 @@ from t2
 order by case when region!='All Regions' then 0 else 1 end,region;
 
 /* Flight Distance Group by Region*/
+/*Flight distance groups were created using 500-mile intervals based on the distance group definition from 
+the U.S. Department of Transportation (DOT). The initial groups ranged from 0 to 5000 miles, 
+as 4983 miles was the maximum flight distance in the dataset. After reviewing the distribution, 
+only a small number of flights fell within the 3500–5000 miles range, so these intervals were combined into a single
+3500 miles and above group.*/
+
 create materialized view flight_distiance_group_distribution_by_region as
 with t as (select flight_id,distance,case 
 	when origin_state in ('CT','ME','MA','NH','RI','VT','NJ','NY','PA') 
