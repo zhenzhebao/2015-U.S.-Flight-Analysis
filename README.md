@@ -16,9 +16,11 @@ https://open-meteo.com/en/docs/historical-weather-api
 ### Tools
 - Tableau
 - PostgreSQL
+- Python
+- Requests Library
 
 ### Tableau Skills
-- Calculated Fields
+- Parameters & Calculated Fields
 - Table Calculations
 - Interactive Dashboard Filters
 - Trend Lines
@@ -33,7 +35,7 @@ https://open-meteo.com/en/docs/historical-weather-api
 - Relational Database Design
 - Data Cleaning & Validation
 - Data Type Conversion
-- CTEs & Subqueries & Correlated Subqueries
+- CTEs, Subqueries & Correlated Subqueries
 - Joins
 - Conditional Aggregation
 - Grouping Sets & Rollup
@@ -43,6 +45,15 @@ https://open-meteo.com/en/docs/historical-weather-api
 - Views & Materialized Views
 - KPI & Rate Calculations
 
+### API & Data Engineering
+- REST API Integration
+- API Request Parameters
+- Retry Logic
+- Error Handling
+- Response Validation
+- ETL Pipeline Development
+- Data Integration
+
 ### Data Analysis
 - KPI Definition
 - Metric Definition & Business Rules
@@ -50,6 +61,7 @@ https://open-meteo.com/en/docs/historical-weather-api
 - Trend & Pattern Analysis
 - Comparative Analysis
 - Event-Based Analysis
+- Diagnostic Analysis
 - Insight Communication
 
 ## Analysis and Dashboards
