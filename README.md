@@ -110,6 +110,7 @@ The graph shows that February 1 was the worst day, with both cancellation and di
 
 ## Database Design 
   - Because the same flight number can be associated with different origin and destination airport pairs, Flight Information and Flight Schedule are connected directly to the Flight table.
+
     <img width="70%" alt="Flights" src="https://github.com/user-attachments/assets/7c4cc5c9-205a-4b40-a1af-21b02571e512" />
     
     <img width="70%" alt="Screenshot 2026-08-30 at 19 17 21" src="https://github.com/user-attachments/assets/702d0260-862d-426e-b6a2-23660db15be2" />
