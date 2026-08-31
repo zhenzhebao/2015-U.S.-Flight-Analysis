@@ -94,6 +94,11 @@ https://open-meteo.com/en/docs/historical-weather-api
 - From a daily perspective, 98.76% of flights operating within the Northeast were canceled on January 27, while 89.80% were canceled on February 2. 
 - The Northeast diversion rate reached 0.72% on January 24, while the diversion rate for cross region flights reached 1.04% on February 1.
 
+## Chicago O'Hare Flight Disruption Analysis
+The analysis of how winter storms affected U.S. air travel revealed that Chicago O'Hare International Airport experienced the highest number of flight cancellations for both departing and arriving flights during this period. Relevant weather data, such as temperature, snowfall, and wind speed, was retrieved from the Open-Meteo Historical Weather API and used to create a total of five charts in Tableau to investigate the relationship between weather conditions and flight disruptions, including cancellations and diversions.
+
+The graph shows that February 1 was the worst day, with both cancellation and diversion rates reaching their highest levels. The situation gradually returned to normal by February 5. Heavy snowfall might have been the main factor contributing to the flight disruptions. Although wind speed also peaked on February 1, relatively high wind speeds occurred on January 25 and January 29 without causing similarly high cancellation or diversion rates. A similar pattern can be seen with temperature. On January 26–27 and February 2–5, temperatures remained below the freezing point for the entire day, but cancellation and diversion rates were much lower. Therefore, compared with temperature and wind speed, heavy snowfall appears to have had a stronger relationship with the severe flight disruptions on February 1 at Chicago O’Hare International Airport. 
+
 ## Data Cleaning 
 - **Invalid airport codes:** Some flights contained origin or destination airport codes that could not be matched to the airport reference data. To preserve these flight records, unmatched airports were mapped to a designated N/A airport record.
 - **Date standardization:** Separate date-related fields were combined into a single calendar date, and unnecessary date columns were removed afterward.
