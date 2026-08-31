@@ -2,9 +2,13 @@
 
 ## Project Overview
 
-This project explores U.S. air travel patterns in 2015 using the 2015 Flight Delays and Cancellations dataset from the U.S. Department of Transportation (DOT). The analysis begins by presenting key KPIs to provide a quick summary of flight activity, followed by analyses of normal, diverted, and canceled flights from multiple perspectives. The project concludes with an in-depth analysis of how winter storms in early 2015 affected U.S. air travel. 
+This project explores U.S. air travel patterns in 2015 using the 2015 Flight Delays and Cancellations dataset from the U.S. Department of Transportation (DOT). The analysis begins by presenting key KPIs to provide a quick summary of flight activity, followed by analyses of normal, diverted, and canceled flights from multiple perspectives. The project concludes with an in-depth analysis of how winter storms in early 2015 affected U.S. air travel. Relevant weather data is retrieved from the Open-Meteo Historical Weather API to investigate which weather factors might be associated with severe flight disruptions at Chicago O'Hare International Airport during this period.
 
-Data Source: https://www.kaggle.com/datasets/usdot/flight-delays
+**Data Source**
+
+https://www.kaggle.com/datasets/usdot/flight-delays
+
+https://open-meteo.com/en/docs/historical-weather-api
 
 
 ## Tools and Skills
